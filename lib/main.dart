@@ -1,39 +1,85 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:my_news_app/view/splash_screen.dart';
+import 'package:flutter_news_app/homeScreen.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const SplashScreen(),
+
+      home: SplashScreen(),
     );
   }
 }
 
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+const spinkit = SpinKitChasingDots(
+  color: Colors.blue,
+  size: 40.0,
+);
+
+class _SplashScreenState extends State<SplashScreen> {
+  Future splashTiming() async {
+    Timer(Duration(seconds: 5), nextScreen);
+  }
+
+  void nextScreen() {
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => HomeScreen(),
+      ),
+      (route) => false,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    splashTiming();
+    double Kwidth = MediaQuery.of(context).size.width;
+    double Kheight = MediaQuery.of(context).size.height;
+    return Scaffold(
+        backgroundColor: Color(0xffF4F3F9),
+        body: Container(
+          alignment: Alignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'images/splash_pic.jpg',
+                fit: BoxFit.cover,
+                width: Kwidth * 0.9,
+                height: Kheight * 0.5,
+              ),
+              SizedBox(
+                height: Kheight * 0.04,
+              ),
+              Text(
+                'TOP HEADLINES',
+                style: GoogleFonts.anton(
+                    letterSpacing: 6.0, fontSize: 18, color: Colors.grey[700]),
+              ),
+              SizedBox(
+                height: Kheight * 0.04,
+              ),
+              spinkit
+            ],
+          ),
+        ));
+  }
+}
