@@ -3,7 +3,7 @@ class AllNewsModel {
   int? totalResults;
   List<Articles>? articles;
 
-  AllNewsModel(AllNewsModel e, {this.status, this.totalResults, this.articles});
+  AllNewsModel({this.status , this.totalResults ,this.articles });
 
   AllNewsModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];

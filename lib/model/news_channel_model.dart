@@ -1,15 +1,15 @@
-class ModelBbcNews {
+class NewsChannelHeadlinesModel {
   String? status;
   int? totalResults;
   List<Articles>? articles;
 
-  ModelBbcNews({this.status, this.totalResults, this.articles});
+  NewsChannelHeadlinesModel({this.status , this.totalResults ,this.articles });
 
-  ModelBbcNews.fromJson(Map<String, dynamic> json) {
+  NewsChannelHeadlinesModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     totalResults = json['totalResults'];
     if (json['articles'] != null) {
-      articles = <Articles>[];
+      articles = [];
       json['articles'].forEach((v) {
         articles!.add(new Articles.fromJson(v));
       });
@@ -34,22 +34,22 @@ class Articles {
   String? description;
   String? url;
   String? urlToImage;
-  var publishedAt;
+  String? publishedAt;
   String? content;
 
   Articles(
       {this.source,
-      this.author,
-      this.title,
-      this.description,
-      this.url,
-      this.urlToImage,
-      this.publishedAt,
-      this.content});
+        this.author,
+        this.title,
+        this.description,
+        this.url,
+        this.urlToImage,
+        this.publishedAt,
+        this.content});
 
   Articles.fromJson(Map<String, dynamic> json) {
     source =
-        json['source'] != null ? new Source.fromJson(json['source']) : null;
+    json['source'] != null ? new Source.fromJson(json['source']) : null;
     author = json['author'];
     title = json['title'];
     description = json['description'];

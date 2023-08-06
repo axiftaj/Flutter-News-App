@@ -35,7 +35,7 @@ const spinkit = SpinKitChasingDots(
 
 class _SplashScreenState extends State<SplashScreen> {
   Future splashTiming() async {
-    Timer(Duration(seconds: 5), nextScreen);
+    Timer(Duration(seconds: 2  ), nextScreen);
   }
 
   void nextScreen() {
