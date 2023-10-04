@@ -4,7 +4,8 @@ import 'package:flutter_news_app/homeScreen.dart';
 import 'package:flutter_news_app/main.dart';
 import 'package:flutter_news_app/model/all_news_model.dart';
 import 'package:flutter_news_app/newsDetailScreen.dart';
-import 'package:flutter_news_app/view_model/newsListViewModel.dart';
+import 'package:flutter_news_app/view_model/news_view_model.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
@@ -25,7 +26,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
     'Technology'
   ];
   final format = new DateFormat('MMMM dd,yyyy');
-  NewsListViewModel newsListViewModel = NewsListViewModel();
+  NewsViewModel newsListViewModel = NewsViewModel();
 
   int btnSelected = 0;
   String selectedCategory = 'General';
@@ -33,6 +34,8 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   Widget build(BuildContext context) {
     double Kwidth = MediaQuery.of(context).size.width;
     double Kheight = MediaQuery.of(context).size.height;
+    final width  = MediaQuery.sizeOf(context).width * 1 ;
+    final height  = MediaQuery.sizeOf(context).height * 1 ;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -125,37 +128,38 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                                         newsContent,
                                         newsSource)));
                           },
-                          child: Container(
-                            alignment: Alignment.topLeft,
-                            padding: EdgeInsets.symmetric(
-                                horizontal: Kwidth * 0.04,
-                                vertical: Kheight * 0.02),
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 15),
                             child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 ClipRRect(
-                                  borderRadius: BorderRadius.circular(10.0),
+                                  borderRadius: BorderRadius.circular(10),
                                   child: CachedNetworkImage(
-                                    imageUrl:
-                                        "${snapshot.data!.articles![index].urlToImage!}",
-                                    height: Kheight * 0.18,
-                                    width: Kwidth * 0.3,
+                                    imageUrl: snapshot.data!.articles![index].urlToImage.toString(),
                                     fit: BoxFit.cover,
-                                    placeholder: (context, url) =>
-                                        Container(child: spinkit2),
-                                    errorWidget: (context, url, error) =>
-                                        new Icon(Icons.error),
+                                    height: height * .18,
+                                    width:  width * .3,
+                                    placeholder:  (context , url) => Container(child: Center(
+                                      child: SpinKitCircle(
+                                        size: 50,
+                                        color: Colors.blue,
+                                      ),
+                                    ),),
+                                    errorWidget: (context, url  ,error) => Icon(Icons.error_outline ,color: Colors.red,),
                                   ),
                                 ),
-                                Container(
-                                    padding: EdgeInsets.only(left: 10),
-                                    height: Kheight * 0.18,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          width: Kwidth * 0.59,
-                                          child: Text(
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 12),
+                                    child: Container(
+                                      height: height * .18,
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Text(
                                             '${snapshot.data!.articles![index].title!}',
                                             style: GoogleFonts.poppins(
                                                 fontSize: 15,
@@ -165,45 +169,28 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                                             overflow: TextOverflow.ellipsis,
                                             maxLines: 3,
                                           ),
-                                        ),
-                                        Spacer(),
-                                        Container(
-                                          width: Kwidth * 0.56,
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
+                                          Spacer(),
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Expanded(
-                                                child: Container(
-                                                  child: Text(
-                                                    '${snapshot.data!.articles![index].source!.name}',
-                                                    softWrap: true,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    style: GoogleFonts.poppins(
-                                                        fontSize: 13,
-                                                        color:
-                                                            Colors.blueAccent,
-                                                        fontWeight:
-                                                            FontWeight.w600),
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                '${format.format(dateTime)}',
-                                                softWrap: true,
-                                                overflow: TextOverflow.ellipsis,
-                                                style: GoogleFonts.poppins(
-                                                    fontSize: 12,
-                                                    color: Colors.black87,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                              ),
+                                              Text(snapshot.data!.articles![index].source!.name.toString(),
+
+                                                style:
+                                                GoogleFonts.poppins(fontSize: 13 , fontWeight: FontWeight.w600)
+                                                ,),
+                                              Text(format.format(dateTime),
+                                                overflow: TextOverflow.ellipsis
+                                                ,style:
+                                                GoogleFonts.poppins(fontSize: 12 , fontWeight: FontWeight.w500)
+                                                ,)
                                             ],
-                                          ),
-                                        )
-                                      ],
-                                    ))
+                                          )
+
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                )
                               ],
                             ),
                           ),

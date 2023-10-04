@@ -2,7 +2,7 @@
 import 'package:equatable/equatable.dart';
 
 import '../model/all_news_model.dart';
-import '../model/news_channel_model.dart';
+import '../model/news_channel_headlines_model.dart';
 
 enum Status { initial, success, failure }
 

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_news_app/model/all_news_model.dart';
-import 'package:flutter_news_app/model/news_channel_model.dart';
+import 'package:flutter_news_app/model/news_channel_headlines_model.dart';
 import 'package:http/http.dart' as http;
 
-class NewReposiotry {
+class NewsRepository {
 
 
   Future<AllNewsModel> fetchAllNews(String category) async {

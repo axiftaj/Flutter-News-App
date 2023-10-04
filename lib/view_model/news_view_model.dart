@@ -1,23 +1,20 @@
+import 'package:flutter_news_app/model/all_news_model.dart';
+import 'package:flutter_news_app/model/news_channel_headlines_model.dart';
 
-
-
-import 'package:my_news_app/models/categories_new_model.dart';
-import 'package:my_news_app/models/news_channel_headlines_model.dart';
-import 'package:my_news_app/repository/news_repository.dart';
+import '../repository/news_repository.dart';
 
 class NewsViewModel {
 
-  final _rep = NewsRepository();
 
-  Future<NewsChannelsHeadlinesModel> fetchNewChannelHeadlinesApi(String channelName) async{
-    final response = await _rep.fetchNewChannelHeadlinesApi(channelName);
-    return response ;
+  Future<AllNewsModel> fetchNews(String category) async {
+    final myApiResult = await NewsRepository().fetchAllNews(category);
+
+    return myApiResult;
   }
 
+  Future<NewsChannelHeadlinesModel> fetchNewsChannelHeadlinesApi(String newChannel) async {
+    final bbcApi = await NewsRepository().fetchNewsChannelHeadlinesApi(newChannel);
 
-  Future<CategoriesNewsModel> fetchCategoriesNewsApi(String category) async{
-    final response = await _rep.fetchCategoriesNewsApi(category);
-    return response ;
+    return bbcApi;
   }
-
 }

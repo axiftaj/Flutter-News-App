@@ -3,14 +3,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter_news_app/bloc/news_event.dart';
 import 'package:flutter_news_app/bloc/news_states.dart';
-import 'package:flutter_news_app/model/all_news_model.dart';
 import 'package:flutter_news_app/repository/news_repository.dart';
 
 
 class NewsBloc extends Bloc<NewsEvent , NewsState> {
-  NewReposiotry postRepository  = NewReposiotry();
-
-
+  NewsRepository postRepository  = NewsRepository();
+  
   NewsBloc() :super(NewsState()){
     on<FetchNewsChannelHeadlines>(fetchChannelNews);
   }
