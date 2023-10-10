@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:my_news_app/models/news_channel_headlines_model.dart';
-import 'package:my_news_app/view/cateogires_screen.dart';
-import 'package:my_news_app/view_model/news_view_model.dart';
 
+
+import '../categoriesScreen.dart';
 import '../models/categories_new_model.dart';
+import '../models/news_channel_headlines_model.dart';
+import '../view_model/news_view_model.dart';
 import 'news_detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -94,7 +95,8 @@ class _HomeScreenState extends State<HomeScreen> {
             height:  height * .55,
             width: width,
             child: FutureBuilder<NewsChannelsHeadlinesModel>(
-              future: newsViewModel.fetchNewChannelHeadlinesApi(name),
+              future: null,
+              //future: newsViewModel.fetchNewChannelHeadlinesApi(name),
               builder: (BuildContext context,  snapshot) {
                 if(snapshot.connectionState == ConnectionState.waiting){
                   return Center(
@@ -222,7 +224,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.all(20),
             child: FutureBuilder<CategoriesNewsModel>(
-              future: newsViewModel.fetchCategoriesNewsApi('General'),
+              future: null,
+              //future: newsViewModel.fetchCategoriesNewsApi('General'),
               builder: (BuildContext context,  snapshot) {
                 if(snapshot.connectionState == ConnectionState.waiting){
                   return const Center(

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2a62d4-3796-4910-81e7-28d9c10ebf9c" name="Changes" comment="new channel headlines integrated" />
+    <list default="true" id="0b2a62d4-3796-4910-81e7-28d9c10ebf9c" name="Changes" comment="upgrading code to bloc">
+      <change beforePath="$PROJECT_DIR$/.idea/Flutter-News-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Flutter-News-App.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/cateogires_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/cateogires_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/splash_screen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -76,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691315925068</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="upgrading code to bloc">
+      <created>1696404819173</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696404819173</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new channel headlines integrated" />
-    <option name="LAST_COMMIT_MESSAGE" value="new channel headlines integrated" />
+    <MESSAGE value="upgrading code to bloc" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrading code to bloc" />
   </component>
 </project>

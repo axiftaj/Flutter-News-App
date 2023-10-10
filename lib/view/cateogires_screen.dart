@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:my_news_app/models/categories_new_model.dart';
 
+import '../models/categories_new_model.dart';
 import '../view_model/news_view_model.dart';
 
 class CategoriesScreen extends StatefulWidget {
@@ -78,7 +78,8 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             SizedBox(height: 20,),
             Expanded(
               child: FutureBuilder<CategoriesNewsModel>(
-                future: newsViewModel.fetchCategoriesNewsApi(categoryName),
+                future: null,
+              //  future: newsViewModel.fetchCategoriesNewsApi(categoryName),
                 builder: (BuildContext context,  snapshot) {
                   if(snapshot.connectionState == ConnectionState.waiting){
                     return const Center(
