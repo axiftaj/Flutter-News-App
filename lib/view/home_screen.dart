@@ -49,13 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final width  = MediaQuery.sizeOf(context).width * 1 ;
     final height  = MediaQuery.sizeOf(context).height * 1 ;
-
     return  Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          context.read<NewsBloc>()..add(FetchNewsChannelHeadlines(name));
-        },
-      ),
       appBar: AppBar(
         leading: IconButton(
           onPressed: (){
