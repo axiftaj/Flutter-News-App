@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2a62d4-3796-4910-81e7-28d9c10ebf9c" name="Changes" comment="news api integrated with bloc">
+    <list default="true" id="0b2a62d4-3796-4910-81e7-28d9c10ebf9c" name="Changes" comment="updating code to bloc">
+      <change afterPath="$PROJECT_DIR$/lib/view/home/widgets/headlines_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/view/home/widgets/home_app_bar_widget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bloc/news_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bloc/news_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bloc/news_states.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bloc/news_states.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/categoriesScreen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/homeScreen.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/all_news_model.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/news_channel_headlines_model.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/newsDetailScreen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repository/news_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/news_repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/cateogires_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/cateogires_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/news_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/news_detail_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/home/home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/splash_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view_model/news_view_model.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +60,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/view/home" />
     </key>
   </component>
   <component name="RunManager">
@@ -121,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697028124158</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updating code to bloc">
+      <created>1697097198742</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697097198742</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updating code to bloc">
+      <created>1697097295793</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697097295793</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +147,7 @@
     <MESSAGE value="new channel headlines integrated" />
     <MESSAGE value="upgrading code to bloc" />
     <MESSAGE value="news api integrated with bloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="news api integrated with bloc" />
+    <MESSAGE value="updating code to bloc" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating code to bloc" />
   </component>
 </project>

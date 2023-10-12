@@ -6,7 +6,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_news_app/view/home_screen.dart';
+import 'package:flutter_news_app/view/home/home_screen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
