@@ -3,10 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_news_app/bloc/news_bloc.dart';
-import 'package:flutter_news_app/homeScreen.dart';
+
 import 'package:flutter_news_app/view/splash_screen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,12 +22,15 @@ class MyApp extends StatelessWidget {
         BlocProvider<NewsBloc>(create: (BuildContext context) => NewsBloc(),),
       ],
       child: MaterialApp(
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
         home: SplashScreen(),
       ),
     );
   }
 }
-
 
 
 

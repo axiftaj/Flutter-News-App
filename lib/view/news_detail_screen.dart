@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
-import '../models/categories_new_model.dart';
+
 
 
 class NewsDetailScreen extends StatefulWidget {

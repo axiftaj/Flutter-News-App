@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2a62d4-3796-4910-81e7-28d9c10ebf9c" name="Changes" comment="upgrading code to bloc">
+    <list default="true" id="0b2a62d4-3796-4910-81e7-28d9c10ebf9c" name="Changes" comment="news api integrated with bloc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bloc/news_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bloc/news_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bloc/news_states.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bloc/news_states.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/categoriesScreen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/homeScreen.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/all_news_model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/news_channel_headlines_model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/newsDetailScreen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repository/news_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/news_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/cateogires_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/cateogires_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/news_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/news_detail_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view_model/news_view_model.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +62,12 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -101,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696944237590</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="news api integrated with bloc">
+      <created>1697028124158</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697028124158</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +138,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new channel headlines integrated" />
     <MESSAGE value="upgrading code to bloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="upgrading code to bloc" />
+    <MESSAGE value="news api integrated with bloc" />
+    <option name="LAST_COMMIT_MESSAGE" value="news api integrated with bloc" />
   </component>
 </project>

@@ -1,8 +1,9 @@
 
 import 'package:equatable/equatable.dart';
 
-import '../model/all_news_model.dart';
-import '../model/news_channel_headlines_model.dart';
+import '../models/categories_new_model.dart';
+import '../models/news_channel_headlines_model.dart';
+
 
 enum Status { initial, success, failure }
 
@@ -11,23 +12,36 @@ class NewsState extends Equatable {
 
    NewsState({
      this.status = Status.initial,
+     this.categoriesStatus = Status.initial,
+     this.categoriesMessage = '' ,
      this.message = '',
-     NewsChannelHeadlinesModel? newsList  ,
-   })  :  newsList = newsList ?? NewsChannelHeadlinesModel();
+     NewsChannelsHeadlinesModel? newsList  ,
+     CategoriesNewsModel? categoriesNewsModel ,
+   })  :  newsList = newsList ?? NewsChannelsHeadlinesModel() , newsCategoriesList = categoriesNewsModel ?? CategoriesNewsModel();
 
   final Status status;
-  final NewsChannelHeadlinesModel? newsList;
+  final NewsChannelsHeadlinesModel? newsList;
   final String message;
+  final Status categoriesStatus  ;
+  final String categoriesMessage  ;
+   final CategoriesNewsModel? newsCategoriesList ;
 
   NewsState copyWith({
     Status? status,
-    NewsChannelHeadlinesModel? newsList,
+    NewsChannelsHeadlinesModel? newsList,
     String? message,
+    CategoriesNewsModel? categoriesNewsModel,
+    String? categoriesMessage,
+    Status? categoriesStatus
+
   }) {
     return NewsState(
       status: status ?? this.status,
       newsList: newsList ??  this.newsList,
       message: message ?? this.message,
+      categoriesMessage: message ?? this.categoriesMessage,
+      categoriesNewsModel: categoriesNewsModel ?? this.newsCategoriesList,
+      categoriesStatus: categoriesStatus ?? this.categoriesStatus,
     );
   }
 
