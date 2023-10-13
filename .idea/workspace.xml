@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2a62d4-3796-4910-81e7-28d9c10ebf9c" name="Changes" comment="updating code to bloc">
-      <change afterPath="$PROJECT_DIR$/lib/view/home/widgets/headlines_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/home/widgets/home_app_bar_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/splash_screen.dart" afterDir="false" />
-    </list>
+    <list default="true" id="0b2a62d4-3796-4910-81e7-28d9c10ebf9c" name="Changes" comment="refactoring code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697097295793</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactoring code">
+      <created>1697102456634</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697102456634</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +148,7 @@
     <MESSAGE value="upgrading code to bloc" />
     <MESSAGE value="news api integrated with bloc" />
     <MESSAGE value="updating code to bloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating code to bloc" />
+    <MESSAGE value="refactoring code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring code" />
   </component>
 </project>
